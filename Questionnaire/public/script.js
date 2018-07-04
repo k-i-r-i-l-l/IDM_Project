@@ -1,5 +1,5 @@
 "use strict";
 
 function runAds() {
-    alert("ad is running");
+    console.log("ad is running");
 }

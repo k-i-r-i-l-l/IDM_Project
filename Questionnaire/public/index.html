@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Welcome!</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="../public/script.js" defer></script>
 </head>
+
 <body>
 
-<div class="header">Question 1</div>
+    <div>
+        <h1>Greetings and salutations!</h1>
+    </div>
 
-<div class="container">
-    <form action="index.html" method="post">
-        <div>
-            <p>Please enter your name: </p>
-            <input type="text" name="name" class="input">
-        </div>
-        <div><input type="submit" class="button" onclick="runAds()"></div>
-    </form>
-</div>
-
-
-<div class="container">
-    <p>Text about how your name can be collected and used</p>
-</div>
-
-
+    <div = "container">
+    <!-- -->
+    
+        <h3> Before we begin, would you mind telling us your name? </ br>
+            <form action="index.html" method="post">
+                <div>
+                    <input type="text" name="name" class="input">
+                </div>
+                <div><input type="submit" class="button" onclick="runAds()"></div>
+            </form>
+        </ br>
+        </ br>
+        Oh, and we'll need you to agree to these <a href="/tip01">Terms and Conditions</a>.
+        </h3>
+    </div>
+    
 </body>
+
 </html>
