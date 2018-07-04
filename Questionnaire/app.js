@@ -24,6 +24,7 @@ app.set("view engine", "ejs");
 app.set("views", "myTemplates");
 
 
+
 //make the app listen for request
 app.listen(port); //listen on that port
 console.log("Server running on http://localhost:"+port);
@@ -87,3 +88,15 @@ app.get("/",  function (req, res) {
 	res.render("index.ejs", {"name":name} );
 }
 );
+
+//Get/Post Request Routing
+//require("./routing/routing.js")(express, app);
+ 
+
+// login post route handles logging in and then redirects users back to home
+/* app.post("/", function(request, response) {
+    // check the credentials
+    var firstname = request.body.name;
+    // TO DO: the firstname into an object then write it to json file 
+    response.redirect("login.html");
+}); */
