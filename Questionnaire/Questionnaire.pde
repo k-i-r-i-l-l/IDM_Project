@@ -58,25 +58,59 @@ void draw() {
       textSize(20);
       text("Recording", 550, 20);
       textAlign(LEFT);
-      text("Dangerous?", faces[i].x+210, faces[i].y+150);
+      text("Dangerous?", faces[i].x+160, faces[i].y+150);
       //text(name[rand_name], faces[i].x+325, faces[i].y+190); // bugged,m doesnt change
 
-      //JSON DATA 
+      //JSON DATA Q1
       values = loadJSONArray("myjsonfile.json");
 
       for (int j = 0; j < values.size(); j++) {
         
-        JSONObject animal = values.getJSONObject(j); 
+        JSONObject name = values.getJSONObject(j);
     
-        String name = animal.getString("name");
-        textSize(30);
-        text ("Name: "+ name, 50, 400);
+        String names = name.getString("name");
+        
+        if (names!= null){
+          textSize(30);
+          noStroke();
+          fill(180,180,180, 180);
+          String n = "Name :";
+          float nw = textWidth(n+names);
+          rect(45,368,nw+10,40);
+          fill(250);
+          text ("Name: "+ names, 50, 400);
+        }
+      }
+      
+      //JSON DATA Q2
+      values = loadJSONArray("myjsonfileq2.json");
+
+      for (int j = 0; j < values.size(); j++) {
+        
+        JSONObject gender = values.getJSONObject(j); 
+    
+        String genders = gender.getString("gender");
+        
+        if (genders!= null){
+          textSize(30);
+          noStroke();
+          fill(180,180,180,180);
+          String s = "Gender :";
+          float gw = textWidth(s+genders);
+          rect(45,418,gw+10,40);
+          textSize(30);
+          fill(250);
+          text ("Gender: "+ genders, 50, 450);
+        }
+        //else if (genders= "female"){
+        //}
       }
 
       //Flashing in recording
       int time_passed = millis() - time_stamp;  //keeps track of the times passed 
       if (time_passed < time_frame && record) 
       {
+        fill(255, 0, 0);
         ellipse (485,13,10,10);
       }
       else if (time_passed >= time_frame)
@@ -89,11 +123,11 @@ void draw() {
       //Have the status change after a few minutes
       int time_status = millis() - stamp;
       if (time_status < time_select && show_status) {
-        
+        fill(255, 0, 0);
         textAlign(LEFT);
         String status = dangerous[rand];
         textSize(20);
-        text(status, faces[i].x+325, faces[i].y+150);
+        text(status, faces[i].x+275, faces[i].y+150);
         //if (rand != [0]) {
           //println("YES");}
       } else if (time_status >= time_frame) {
@@ -104,15 +138,17 @@ void draw() {
         //display();
       }
       else {
+        fill(255, 0, 0);
         textAlign(LEFT);
-        text("NEW SCORE!", faces[i].x+325, faces[i].y+150);
-      }
+        textSize(20);
+        text("NEW SCORE!", faces[i].x+275, faces[i].y+150);
+      } 
     }
   } 
   
   if (faces.length<=0) { 
     textAlign(CENTER); 
-    fill(255, 0, 0); 
+    fill(0); 
     textSize(40); 
     text("NO SUSPECT FOUND", 320, 220);
   }
