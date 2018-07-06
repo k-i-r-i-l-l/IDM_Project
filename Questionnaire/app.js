@@ -89,9 +89,7 @@ app.get("/",  function (req, res) {
 }
 );
 
-//Get/Post Request Routing
-//require("./routing/routing.js")(express, app);
- 
+
 
 // login post route handles logging in and then redirects users back to home
 /* app.post("/", function(request, response) {
