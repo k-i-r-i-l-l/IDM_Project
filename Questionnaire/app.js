@@ -29,7 +29,9 @@ app.set("views", "myTemplates");
 app.listen(port); //listen on that port
 console.log("Server running on http://localhost:"+port);
 
-//Setting json
+
+//------- WRITTING JSON -----------------//
+//Setting json Q1
 const dataFile = "./myjsonfile.json";
 var word = fs.readFileSync("myjsonfile.json");
 var data = JSON.parse(word); // this makes readable ths things
@@ -53,8 +55,10 @@ app.post("/question1", function(request, response) {
 				dataObj = [
 					  {
 					    "name": firstname,
-					  }
-					]; // WORKING
+					  }]
+					; // WORKING
+				//dataObj.name.push({id: 2, square:3});
+		    //console.log(dataObj);
 				console.log(dataObj);
 
 		    fs.writeFile("./myjsonfile.json", JSON.stringify(dataObj), function(err) {
@@ -64,37 +68,156 @@ app.post("/question1", function(request, response) {
 							console.log("Json has been updated")
 		    });
 		});
-
-
-	  response.redirect("/question2");
+	  response.redirect("ad/ads1.html");
 });
 
+// Question 2 -- ELEGANT FORM BUT NOT WORKING
+/*app.post("/question2", function(request, response) {
+     //check the credentials
+    var gender = request.body.gender;
+    console.log(gender); //WORKING
+    // TO DO: the firstname into an object then write it to json file
+		fs.readFile( dataFile, function read(err, data) {
+		    if (err) {
+		        throw err;
+						console.log("error readfile");
+		    }
+		    dataObj = JSON.parse(data); // transform the JSON file into a readable thing to humans
+				console.log(dataObj);
+				dataObj.gender = gender
+					  //{
+					  //  "gender": gender,
+					  //}
+					; // WORKING
+				//dataObj.name.push({id: 2, square:3});
+		    //console.log(dataObj);
+				console.log(dataObj);
+
+		    fs.writeFile("./myjsonfile.json", JSON.stringify(dataObj), function(err) {
+		        if(err) {
+		            return console.log(err);
+		        }
+							console.log("Json has been updated")
+		    });
+		});
+	  response.redirect("ad/ads1.html");
+});*/
+
+
+//Setting JSON Q2
+const dataFile2 = "./myjsonfileq2.json";
+var word2 = fs.readFileSync("myjsonfile.json");
+var data2 = JSON.parse(word); // this makes readable ths things
+console.log(dataFile2);
+console.log(data2);
+
+// Second question
+app.post("/question2", function(request, response) {
+     //check the credentials
+    var gender = request.body.gender;
+    console.log(gender); //WORKING
+    // TO DO: the firstname into an object then write it to json file
+		fs.readFile( dataFile2, function read(err, data) {
+		    if (err) {
+		        throw err;
+						console.log("error readfile");
+		    }
+		    dataObj = JSON.parse(data); // transform the JSON file into a readable thing to humans
+				console.log(dataObj);
+				dataObj = [
+					  {
+					    "gender": gender,
+					  }
+					]; // WORKING
+				//dataObj.name.push({id: 2, square:3});
+		    //console.log(dataObj);
+				console.log(dataObj);
+
+		    fs.writeFile("./myjsonfileq2.json", JSON.stringify(dataObj), function(err) {
+		        if(err) {
+		            return console.log(err);
+		        }
+							console.log("Json has been updated")
+		    });
+		});
+
+
+	  response.redirect("final.html");
+});
+
+// FINAL AND DELETING DATA
+app.post("/delete", function(request, response) {
+    //JSON name
+		fs.readFile( dataFile, function read(err, data) {
+		    if (err) {
+		        throw err;
+						console.log("error readfile");
+		    }
+		    dataObj = JSON.parse(data); // transform the JSON file into a readable thing to humans
+				console.log(dataObj);
+				dataObj = [
+					  {
+
+					  }]
+					; // WORKING
+				//dataObj.name.push({id: 2, square:3});
+		    //console.log(dataObj);
+				console.log(dataObj);
+
+		    fs.writeFile("./myjsonfile.json", JSON.stringify(dataObj), function(err) {
+		        if(err) {
+		            return console.log(err);
+		        }
+							console.log("Json has been updated")
+		    });
+		});
+		//JSON gender
+		fs.readFile( dataFile2, function read(err, data) {
+				if (err) {
+						throw err;
+						console.log("error readfile");
+				}
+				dataObj = JSON.parse(data); // transform the JSON file into a readable thing to humans
+				console.log(dataObj);
+				dataObj = [
+						{
+
+						}
+					]; // WORKING
+				//dataObj.name.push({id: 2, square:3});
+				//console.log(dataObj);
+				console.log(dataObj);
+
+				fs.writeFile("./myjsonfileq2.json", JSON.stringify(dataObj), function(err) {
+						if(err) {
+								return console.log(err);
+						}
+							console.log("Json has been updated")
+				});
+		});
+	  response.redirect("index.html");
+});
+
+
+/*  dont know what this work
 app.post("/question-2", function (req, res) {
   var firstname = request.session.name;
   response.redirect("/index.ejs");
 
 
-});
-
-// --- GET SECTION ---
-app.get("/question2",  function (req, res) {
-	res.render("question-2.ejs", {"sex": req.body.name} );
-}
-);
-
-
-app.get("/",  function (req, res) {
-  var name = req.body.name;
-	res.render("index.ejs", {"name":name} );
-}
-);
-
-
-
-// login post route handles logging in and then redirects users back to home
-/* app.post("/", function(request, response) {
-    // check the credentials
-    var firstname = request.body.name;
-    // TO DO: the firstname into an object then write it to json file 
-    response.redirect("login.html");
 }); */
+
+// -------- GET SECTION ----------------//
+
+// Question 1
+app.get("index.html",  function (req, res) {
+  var name = req.body.name;
+	res.redirect("index.html", {"name":name} );
+}
+);
+
+// Question 2
+app.get("question-2.html",  function (req, res) {
+	res.redirect("question-2.ejs", {"sex": req.body.name} );
+}
+);
