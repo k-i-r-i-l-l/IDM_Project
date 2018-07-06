@@ -1,102 +1,82 @@
-//required modules
 var express = require("express");
 var bodyParser = require("body-parser");
-var session	=	require('express-session');
-var fs = require("fs");
 
-//set up our express app object
+var port = 8082;
+
 var app = express();
 
-//global variables
-var port = 8807;
-
-//configure our middleware
-app.use(express.static("myStatic")); // contains html, css and images
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(session({
-				secret:	'crmorytp8vyp98p%&ADIB66^^&fjdfdfaklfdhf',
-				resave:	false,
-				saveUninitialized:	true,
-				cookie:	{	maxAge:	60000*11000	}
-}));
-
-app.set("view engine", "ejs");
-app.set("views", "myTemplates");
-
-
-
-//make the app listen for request
-app.listen(port); //listen on that port
-console.log("Server running on http://localhost:"+port);
-
-//Setting json
-const dataFile = "./myjsonfile.json";
-var word = fs.readFileSync("myjsonfile.json");
-var data = JSON.parse(word); // this makes readable ths things
-console.log(dataFile);
-console.log(data);
-
-
-// First question
-app.post("/question1", function(request, response) {
-     //check the credentials
-    var firstname = request.body.name;
-    console.log(firstname); //WORKING
-    // TO DO: the firstname into an object then write it to json file
-		fs.readFile( dataFile, function read(err, data) {
-		    if (err) {
-		        throw err;
-						console.log("error readfile");
-		    }
-		    dataObj = JSON.parse(data); // transform the JSON file into a readable thing to humans
-				console.log(dataObj);
-				dataObj = [
-					  {
-					    "name": firstname,
-					  }
-					]; // WORKING
-				console.log(dataObj);
-
-		    fs.writeFile("./myjsonfile.json", JSON.stringify(dataObj), function(err) {
-		        if(err) {
-		            return console.log(err);
-		        }
-							console.log("Json has been updated")
-		    });
-		});
-
-
-	  response.redirect("/question2");
-});
-
-app.post("/question-2", function (req, res) {
-  var firstname = request.session.name;
-  response.redirect("/index.ejs");
-
-
-});
-
-// --- GET SECTION ---
-app.get("/question2",  function (req, res) {
-	res.render("question-2.ejs", {"sex": req.body.name} );
-}
-);
-
-
-app.get("/",  function (req, res) {
-  var name = req.body.name;
-	res.render("index.ejs", {"name":name} );
-}
-);
 
 //Get/Post Request Routing
-//require("./routing/routing.js")(express, app);
- 
+app.use(express.static("public"));
+app.set("view engine", "html");
+app.engine('html', require('ejs').renderFile);
 
-// login post route handles logging in and then redirects users back to home
-/* app.post("/", function(request, response) {
-    // check the credentials
-    var firstname = request.body.name;
-    // TO DO: the firstname into an object then write it to json file 
-    response.redirect("login.html");
-}); */
+
+    
+    //Homepage
+    app.get("/", function(request, response) {
+        response.render("index.html");
+    });
+    
+    //Question 01
+    app.get("/q01", function(req, res){
+        res.render("q01.html");
+    });
+    
+    //Question 02    
+    app.get("/q02", function(req, res){
+        res.render("q02.html");
+    });
+    
+    //Question 03    
+    app.get("/q03", function(req, res){
+        res.render("q03.html");
+    });
+    
+    //Question 04    
+    app.get("/q04", function(req, res){
+        res.render("q04.html");
+    });
+    
+    //Question 05    
+    app.get("/q05", function(req, res){
+        res.render("q05.html");
+    });
+
+////////////////////////////////////////
+////    GDPR AND DATA PROTECTION    ////
+////////////////////////////////////////
+
+    //Tip 1
+    app.get("/tip01", function(req, res){
+        res.render("tip01.html");
+    });
+    
+    //Tip 2
+    app.get("/tip02", function(req, res){
+        res.render("tip02.html");
+    });
+    
+    //Tip 3
+    app.get("/tip03", function(req, res){
+        res.render("tip03.html");
+    });    
+
+    //Tip 4
+    app.get("/tip04", function(req, res){
+        res.render("tip04.html");
+    });    
+    
+    //Tip 5
+    app.get("/tip05", function(req, res){
+        res.render("tip05.html");
+    });
+
+    //Tip 6
+    app.get("/tip06", function(req, res){
+        res.render("tip06.html");
+    });
+
+app.listen(port);
+console.log("The port number is " + port);
