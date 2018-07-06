@@ -5,13 +5,21 @@
 FILE STRUCTURE
     //.idea
     //node_modules
-    public                  (DIRECTORY)
+    myStatic                  (DIRECTORY)
+        ad                      (DIRECTORY)
+            ads1.html
+        test                    (DIRECTORY) 
+            test1.html
+        tips                    (DIRECTORY)
+            tip1.html
+        final.html // simulating the end page where the info gets deleted - WORKING
         index.html
+        question-2.html  // working
         script.js
         style.css
     routing                 (DIRECTORY)
         routing.js
-    templates               (DIRECTORY)
+    templates //NO LONGER IN USE              (DIRECTORY)
         questions           (DIRECTORY)
             question01.ejs
             question02.ejs
@@ -24,8 +32,7 @@ FILE STRUCTURE
             tip03.ejs
             tip04.ejs
             tip05.ejs
-            
-        index.ejs
+
         
 NOTES
     routing.js handles all get/post requests
