@@ -2,11 +2,12 @@ body {
     background-color: #263238;
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .header {
     background-color:#000a12;
-    font-size:16px;
+    font-size:35px;
     font-weight: bold;
     letter-spacing:4px;
     text-transform:uppercase;
@@ -15,7 +16,7 @@ body {
 }
 
 .container {
-    background-color: #4f5b62;
+    /*background-color: #4f5b62;*/
     font-size: 20px;
     text-align: center;
 }
@@ -27,8 +28,13 @@ body {
     border-radius: 5px;
     background-color: #b71c1c;
     border: none;
+    margin: 3%;
     font-size: 16px;
     color: #f8f8f8;
+}
+
+.data-gathering {
+
 }
 
 .input {
@@ -50,8 +56,16 @@ a:hover {
     text-decoration:none;
 }
 
+.extra-text{
+  overflow: auto;
+}
+
+.next {
+  float:right;
+}
 
 /*
 @media all and (max-width: 700px) {
 
 }
+
