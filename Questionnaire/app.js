@@ -20,8 +20,12 @@ app.use(session({
 				cookie:	{	maxAge:	60000*11000	}
 }));
 
-app.set("view engine", "ejs");
-app.set("views", "myTemplates");
+
+app.use(express.static("public"));
+// app.set("views", "myTemplates");
+app.set("view engine", "html");
+app.engine('html', require('ejs').renderFile);
+
 
 
 
