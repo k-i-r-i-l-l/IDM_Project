@@ -71,6 +71,22 @@ a:hover {
   float:right;
 }
 
+.home {
+  margin-left: 43.5%;
+}
+
+.prev {
+  float:left;
+}
+
+#ad1{
+	margin-left: 47.5%;
+}
+
+A:link {
+	color: blue;
+}
+
 /*
 @media all and (max-width: 700px) {
 
