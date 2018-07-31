@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="header">
+      Get to know your digital body
+  </div>
+  <div class="container">
+
+
+        <% if ( ((gender == 'male') && (dataAge == "genZ")) ||
+        (gender == 'female') && (dataAge == "genZ") ||
+        (gender == 'other') && (dataAge == "genZ") ||
+        (dataAge == "genZ")) {%>
+            Genderless genZ
+                So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>,
+              you'll get ads that are only shown to <%= gender %>s AND  <%= dataAge %>.
+
+
+           <% }  else if ( ((gender == 'male') && (dataAge == "millenial")) ||
+            (gender == 'female') && (dataAge == "millenial") ||
+             (gender == 'other') && (dataAge == "millenial") ||
+             (dataAge == "millenial") ) {%>
+            Genderless millenial
+                So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>,
+              you'll get ads that are only shown to <%= gender %>s AND  <%= dataAge %>.
+
+
+           <% } else  if ( ((gender == 'male') && (dataAge == "genX")) || (dataAge == "genX")){ %>
+             Dad mid 30-50 or someone who didnt answer about sex
+              So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+          <% } else  if ((gender == 'female') && (dataAge == "genX")){ %>
+              Mother mid 30-50
+              So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+        <% } else  if ((gender == 'other') && (dataAge == "genX")){ %>
+                  Weird person between 35-50, maybe sexual minority? Progressive views? WE CAN MAKE A QUEEEEEEEN ADD
+                  So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+          <% } else  if ( ((gender == 'male') && (dataAge == "babyBoomer")) || (dataAge == "babyBoomer")){ %>
+                Babyboomer male, someone between 55 and 68 or who didn't answer the gender question
+                So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+            <% } else  if ((gender == 'female') && (dataAge == "babyBoomer")){ %>
+              Babyboomer male, someone between 55 and 68
+              So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+              <% } else  if ((gender == 'other') && (dataAge == "babyBoomer")){ %>
+                Weird person between 5568-, maybe sexual minority? Progressive views? WE CAN MAKE A BEATLES ADD
+                So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+          <% }  else if ( ((gender == 'male') && (dataAge == "silentGen")) ||
+           (gender == 'female') && (dataAge == "silentGen") ||
+           (gender == 'other') && (dataAge == "silentGen") ||
+           (dataAge == "silentGen") ) {%>
+             Someone about to die.
+                So <%= dataName %>, because  answered you were <span class="important"> <%= dataAge %></span>, you'll get ads that are only shown to <%= gender %>s. This is an example
+
+
+          <% } else  { %>
+
+              We have a problem. We are sorry, you beat the system.
+          <% }; %>
+        </div>
+
+          <div class="container2">
+              <div>
+                  <a href="../tips/tip3.html"><img src="../images/continue.png" alt="continue" height="100" width="200"></a>
+              </div>
+          </div>
+</body>
+</html>

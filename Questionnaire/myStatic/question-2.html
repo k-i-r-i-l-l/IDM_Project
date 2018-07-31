@@ -15,30 +15,26 @@
 
   <div class="container">
 
-      <h3> Do you mind telling us your sex? </ br>
+      <h3> Do you mind telling us your sex? </h3>
 
 
       <div class="question1">
        <form action="/question2" method="post" >
           <label> Select your sex
             <br>
-            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="male" required> Male<br>
             <input type="radio" name="gender" value="female"> Female<br>
             <input type="radio" name="gender" value="other"> Other
           </label>
+        </div>
+      </div>
 
-          <div><input type="submit" class="button" ></div>
+      <div class="container2">
+          <div>
+            <input type="submit" class="button" >
+          </div>
         </form>
-
-      </h3>
-      
-        <div class="nav">
-			<a href="/question3" class="next">Continue</a>
-		
-			<a href="../index.html" class="home">Start Over</a>
-			
-			<a href="../test/test1.html" class="prev">Previous</a>
-		</div>
+      </div>
 </div>
 
 

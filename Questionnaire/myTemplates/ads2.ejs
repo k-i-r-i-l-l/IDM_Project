@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="header">
+      Get to know your digital body
+  </div>
+
+          <% if (gender == 'male') {%>
+
+
+            <div class="page-container">
+                <div class="background-colour"></div>
+                <div class="ad">
+                    <div class="img2-div">
+                        <img class="image" src="../ad/jeep.png">
+                    </div>
+                    <div class="img1-div">
+                        <img class="image" src="../ad/viagra.png">
+                    </div>
+                    <div class="img3-div">
+                        <img class="image" src="../ad/beer.png">
+                    </div>
+                    <div class="cta-div">
+                        <a href="http://google.com"><img class="cta-img" src="../ad/cta.svg"></a>
+                    </div>
+                    <p class="headline-txt">PROVE THEM YOU'RE A REAL MAN</p>
+                    <p class="subhead-txt">WITH THESE MANLY THINGS</p>
+
+                </div>
+                <!--
+                <div class="intro intro-3">We know what you need</div>
+                <div class="intro intro-2">Living in a village?</div>
+                <div class="intro intro-1">Middle aged man?</div>
+                -->
+            </div>
+
+
+             <% } else  if (gender == 'female' ){ %>
+
+               <div class="page-container">
+                 <div class="background-colour"></div>
+                 <div class="ad">
+                     <div class="img2-div">
+                         <img class="image" src="../ad/lipstick.png">
+                     </div>
+                     <div class="img1-div">
+                         <img class="image" src="../ad/cooking_pan.png">
+                     </div>
+                     <div class="img3-div">
+                         <img class="image" src="../ad/vacuum_cleaner.png">
+                     </div>
+                     <div class="cta-div">
+                         <a href="http://google.com"><img class="cta-img" src="../ad/cta.svg"></a>
+                     </div>
+                     <p class="headline-txt">THREE SIMPLE THINGS</p>
+                     <p class="subhead-txt">TO BE A PERFECT WOMAN</p>
+
+                 </div>
+             </div>
+
+            <% } else  if (gender == 'other' ){ %>
+
+              <div class="page-container">
+                <div class="background-colour"></div>
+                  <div class="ad">
+                      <div class="img2-div">
+                          <img class="image" src="../ad/dating_app.png">
+                      </div>
+                      <div class="img1-div">
+                          <img class="image" src="../ad/briefs.png">
+                      </div>
+                      <div class="img3-div">
+                          <img class="image" src="../ad/checkup.png">
+                      </div>
+                      <div class="cta-div">
+                          <a href="http://google.com"><img class="cta-img" src="../ad/cta.svg"></a>
+                      </div>
+                    <p class="headline-txt">LGBTQAIB+ LIKE ABC</p>
+                    <p class="subhead-txt">WITH OUR APP, BRIEFS, AND CHECK-UP </p>
+                </div>
+              </div>
+           <% } else  { %>
+
+             <p> Don't try to escape the system, we know you are not answering the gender
+               question. You'll still get an ad, targeted at those - ejm ejm like you - that
+               think they are smarter than the system and can not get ads based on their gender.
+               Oh no, no, no, no, how wrong you are </p>
+            <% } %>
+        </p>
+
+        <div class="container2">
+            <div>
+                <a href="../tips/tip2.html"><img src="../images/continue.png" alt="continue" height="100" width="200"></a>
+            </div>
+        </div>
+
+
+</body>
+</html>

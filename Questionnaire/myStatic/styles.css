@@ -1,12 +1,23 @@
+/*---- NORMAL PAGE CSS -----*/
+
 body {
-    background-color: #263238;
-    color: white;
-    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    color: black;
+    font-family: 'Arial', sans-serif;
     font-size: 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    line-height: 1.2;
+    cursor: pointer;
+}
+h3 {
+  text-align: center;
 }
 
 .header {
     background-color:#000a12;
+    color: white;
     font-size:35px;
     font-weight: bold;
     letter-spacing:4px;
@@ -16,9 +27,36 @@ body {
 }
 
 .container {
-    /*background-color: #4f5b62;*/
-    font-size: 20px;
-    text-align: center;
+        text-align: center;
+        background-color: #1874CD;
+        width: 50vw;
+        margin: auto;
+        padding-top: 4vh;
+        padding-bottom: 6vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: #F5F5F5;
+       border-radius: 10px 10px 10px 10px;
+}
+
+.container2{
+  text-align: center;
+}
+
+.tips {
+  display: inline-block;
+  text-align: left;
+  line-height: 200%;
+}
+
+.question1 {
+  display: inline-block;
+  text-align: left;
+}
+
+.important {
+  font-size: 29px;
+  font-weight: bold;
 }
 
 .button {
@@ -26,18 +64,10 @@ body {
     width: 150px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #b71c1c;
+    background-color: #1874CD;
     border: none;
-    margin: 3%;
-    font-size: 16px;
+    font-size: 26px;
     color: #f8f8f8;
-}
-
-.graphic{
-    display: block;
-    margin-top: 1%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .data-gathering {
@@ -68,69 +98,188 @@ a:hover {
 }
 
 .next {
+  display: flex;
   float:right;
 }
 
-.home {
-  margin-left: 43.5%;
+/*---- ADS PAGE CSS ---- */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    line-height: 1.2;
+    cursor: pointer;
 }
 
-.prev {
-  float:left;
+.page-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-#ad1{
-	margin-left: 47.5%;
+p {
+    margin: 0px;
 }
 
-A:link {
-	color: blue;
+.background-colour {
+    position: absolute;
+    background-image: none;
+    left: 0px;
+    top: 0px;
+    background-color:#1874CD ;
+    height: 33%;
+    width: 100%;
+}
+
+.ad {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+
+}
+
+
+.image {
+    position: absolute;
+    width: 100%;
+}
+
+
+.img1-div {
+    position: absolute;
+    top: 10%;
+    left: 33%;
+    width: 33%;
+    height: 33%;
+    opacity: 1;
+    animation-name: img1-anim;
+    animation-duration: 2s;
+
+}
+
+.img2-div {
+    position: absolute;
+    width: 15%;
+    height: 33%;
+    top: 20%;
+    left: 5%;
+    opacity: 1;
+    animation-name: img2-anim;
+    animation-duration: 2s;
+}
+.img3-div {
+    position: absolute;
+    width: 15%;
+    height: 33%;
+    top: 20%;
+    right: 5%;
+    opacity: 1;
+    animation-name: img3-anim;
+    animation-duration: 2s;
+}
+
+@keyframes img1-anim {
+    0% {
+        top: 20%;
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    25% {
+        top: 20%;
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    75% {
+        top: 10%;
+        opacity: 1;
+        animation-timing-function: ease;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes img2-anim {
+    0% {
+        top: 30%;
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    50% {
+        top: 20%;
+        opacity: 1;
+        animation-timing-function: ease;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes img3-anim {
+    0% {
+        top: 30%;
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    50% {
+        top: 30%;
+        opacity: 0;
+        animation-timing-function: ease;
+    }
+    100% {
+        top: 20%;
+        opacity: 1;
+        animation-timing-function: ease;
+    }
+}
+
+
+.headline-txt {
+    position: absolute;
+    font-family: Roboto;
+    left: 5%;
+    color: rgb(36, 36, 36);
+    text-align: center;
+    width: 90%;
+    height: 10%;
+    border-style: solid;
+    top: 60%;
+    border-width: 0px;
+    font-size: 68px;
+    font-weight: bold;
+}
+.subhead-txt {
+    position: absolute;
+    font-family: Roboto;
+    left: 5%;
+    width: 90%;
+    color: rgb(36, 36, 36);
+    text-align: center;
+    border-style: solid;
+    top: 70%;
+    border-width: 0px;
+    font-size: 55px;
+    height: 8.5%;
+}
+.cta-div {
+    position: absolute;
+    left: 30.35%;
+    top: 82%;
+    width: 40%;
+    height: 13.2%;
+}
+.cta-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
 }
 
 /*
 @media all and (max-width: 700px) {
 
-}
-
-*/
-
-/* MODAL BOX */
-
-/* Background Box */
-.modal {
-    display: block; /* Visible by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 1%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Image/Dispaly Content */
-.modal-content {
-    background-color: #36393e;
-    margin: auto;
-    padding: 1%;
-    border: 1px solid #888;
-    width: 70%;
-}
-
-/* The Close Button */
-.close {
-    color: #fffdd0;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }

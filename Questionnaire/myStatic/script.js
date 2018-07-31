@@ -4,17 +4,35 @@ function runAds() {
     alert("ad is running");
 }
 
-var answer = ["A"];
+var limit = 3;
+$('input.checkbox').on('change', function(evt) {
+   if($(this).siblings(':checked').length >= limit) {
+       this.checked = false;
+   }
+});
 
-function checkAnswers () {
-    var radios = document.getElementsByName("option");
-    console.log(radios);
-    for(var i=0; i<radios.length; i++)
-        if(radios[i].checked) {
-            if (radios[i].value==answer) {
-                alert("you are correct");
-            } else {
-                alert("you are wrong");
-            }
-        }
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("clickModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
