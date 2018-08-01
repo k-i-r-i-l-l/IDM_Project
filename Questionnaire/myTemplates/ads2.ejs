@@ -5,14 +5,19 @@
     <title>Ads</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="../myStatic/modal.js" defer></script>
+    <script src="../tunes/audio.js" defer></script>
 </head>
 <body>
 
   <div class="header">
       Get to know your digital body
   </div>
-
+  
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Close button -->
           <% if (gender == 'male') {%>
 
 
@@ -95,6 +100,8 @@
                Oh no, no, no, no, how wrong you are </p>
             <% } %>
         </p>
+        </div>
+    </div>
 
         <div class="container2">
             <div>
@@ -104,4 +111,9 @@
 
 
 </body>
+
+    <audio autoplay hidden loop>
+        <source src="media/thomas.mp3" type="audio/mpeg">
+    </audio>
+    
 </html>
