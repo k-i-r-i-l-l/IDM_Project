@@ -5,17 +5,19 @@
     <title>Ads</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- <script src="script.js" defer></script> -->
-    <script src="../myStatic/modal.js" defer></script>
+    <!-- MODAL -->
+    <script src="../modal.js" defer></script>
+    <!-- <link rel="stylesheet" href="../modal.css"> -->
 </head>
+
 <body>
 
   <div class="header">
       Get to know your digital body
   </div>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span> <!-- Close button -->
+      <!-- <div id="myModal" class="modal"> -->
+        <!-- <div class="modal-content"> -->
+            <!-- <span class="close">&times;</span> <!-- Close button --> -->
 
         <% if ((gender == 'male') && (dataEthnicity == "white") && ( (dataAge == 'genX') || (dataAge == 'babyBoomer') || (dataAge == 'silentGen') )) {%>
           <div class="page-container">
@@ -55,19 +57,20 @@
 
             So <%= dataName %>, We need to code it....
           <% } %>
-
-          <div class="container2">
-              <div>
-                  <a href="../tips/tip5.html"><img src="../images/continue.png" alt="continue" height="100" width="200"></a>
-              </div>
+          <!-- </div> -->
+        <!-- </div> -->
+       
+        <div class="container2">
+          <div>
+              <a href="../tips/tip5.html"><img src="../images/continue.png" alt="continue" height="100" width="200"></a>
           </div>
-        </div>
       </div>
+
 
 </body>
 
     <audio autoplay hidden loop>
-        <source src="media/thomas.mp3" type="audio/mpeg">
+        <source src="../tunes/spliter_Loop.mp3" type="audio/mpeg">
     </audio>
     
 </html>
