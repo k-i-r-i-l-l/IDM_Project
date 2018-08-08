@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8140b8a3-9a1e-4224-9ed2-7193dc2d1eaf" name="Default" comment="some more ads">
+    <list default="true" id="8140b8a3-9a1e-4224-9ed2-7193dc2d1eaf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Questionnaire/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Questionnaire/.idea/workspace.xml" />
     </list>
@@ -103,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1533041295480</updated>
       <workItem from="1533041297182" duration="1091000" />
-      <workItem from="1533736685765" duration="106000" />
+      <workItem from="1533736685765" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="Claudia's update 31.07">
       <created>1533041439145</created>
@@ -140,11 +140,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533736769924</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some more ads">
+      <created>1533736813578</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1533736813578</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1197000" />
+    <option name="totallyTimeSpent" value="1219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="151" y="71" width="1018" height="676" extended-state="0" />
@@ -175,6 +182,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Claudia's update 31.07" />
     <MESSAGE value="some more ads" />
     <option name="LAST_COMMIT_MESSAGE" value="some more ads" />
